@@ -9,19 +9,27 @@
             <li class="tab"><img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_format_list_bulleted_48px-512.png" alt="" class="icon" /></li>
             <li class="tab"><img src="https://i.imgur.com/LCCJ06E.png" alt="" class="icon" /></li>
         </ul>
-
-        <form class="form" #typeroomForm="ngForm" (ngSubmit)="addTyperoom(typeroomForm)">
+        <form class="form" id="formNewAdmin" name="formNewAdmin">
+            <input type="text" id="name" name="name" placeholder="nombre" class="textbox" [(ngModel)]="tiperoom.name"> 
+            <input type="text" name="description" id="description" placeholder="Descripcion" class="textbox" [(ngModel)]="tiperoom.description">
+            <button type="submit" class="btn btn-primary btn-block" (click)="savetipe()">Registrar</button>
+            <br>
+            <button class="btn btn-danger limpiar" (click)="limpiar()">Limpiar</button>
+        </form>
+        <!-- <form class="form" #typeroomForm="ngForm" (ngSubmit)="addTyperoom(typeroomForm)">
             <input type="text" name="name" #name="ngModel" [(ngModel)]="typeroomService.selectedTyperoom.name" placeholder="nombre" class="textbox" />
             <input type="text" name="description" #description="ngModel" [(ngModel)]="typeroomService.selectedTyperoom.description" placeholder="Descripcion" class="textbox" />
-            <!-- <input type="text" placeholder="Email Address" class="textbox" /> -->
+            
             <button class="button">
                 Guardar
             </button>
             <button class="btn btn-outline-danger limpiar" (click)="resetForm(typeroomForm)">
                 Limpiar
             </button>
-            <!-- <input type="button" value="Next"  /> -->
-        </form>
+            
+        </form> -->
+        <!-- <input type="text" placeholder="Email Address" class="textbox" /> -->
+        <!-- <input type="button" value="Next"  /> -->
     </div>
 </div>
 

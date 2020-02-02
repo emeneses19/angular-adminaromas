@@ -1,12 +1,7 @@
-export class Typeroom {
+import { Title } from '@angular/platform-browser';
 
-    constructor (id= 0,name = '', description= '' ){
-        this.id = id;
-        this.name = name;
-        this.description = description
-
-    }
-    id?: number;
-    name: string;
-    description: string;
+export interface Typeroom {
+    id?: number,
+    name: string,
+    description: string,
 }

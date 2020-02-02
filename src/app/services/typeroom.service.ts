@@ -7,12 +7,12 @@ import { Typeroom } from '../models/typeroom';
 })
 export class TyperoomService {
 
-  selectedTyperoom: Typeroom;
-  typeroom: Typeroom[];
-  readonly URI_API = 'http://localhost:666/habitacion';
+  // selectedTyperoom: Typeroom;
+  // typeroom: Typeroom[];
+  readonly URI_API = 'http://localhost:666/tipohabitacion';
 
   constructor( private http: HttpClient) { 
-    this.selectedTyperoom = new Typeroom();
+    // this.selectedTyperoom = new Typeroom();
   }
 
   getTyperooms(){

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TyperoomService } from '../../services/typeroom.service';
-import { NgForm } from '@angular/forms';
+// import { NgForm } from '@angular/forms';
 import { Typeroom } from 'src/app/models/typeroom';
 
 @Component({
@@ -11,24 +11,42 @@ import { Typeroom } from 'src/app/models/typeroom';
 })
 export class TyperoomComponent implements OnInit {
 
+  tiperoom:Typeroom={
+    id: 0,
+    name: '',
+    description: ''
+  }
   constructor(private typeroomService: TyperoomService) { }
-
+  savetipe() {
+    delete this.tiperoom.id;
+    this.typeroomService.postTyperoom(this.tiperoom)
+      .subscribe(
+        res => {
+          console.log(res);
+        },
+        err => console.error(err)
+      )
+  }
+  limpiar(){
+    this.tiperoom.name='';
+    this.tiperoom.description='';
+  }
   ngOnInit() {
   }
 
-  addTyperoom(form: NgForm){
-    // console.log(form.value);
-    this.typeroomService.postTyperoom(form.value)
-    .subscribe(res => {
-      console.log(res);
-    });
-  }
+  // addTyperoom(form: NgForm){
+  //   // console.log(form.value);
+  //   this.typeroomService.postTyperoom(form.value)
+  //   .subscribe(res => {
+  //     console.log(res);
+  //   });
+  // }
 
-  resetForm(form?: NgForm){
-    if(form){
-      form.reset();
-      this.typeroomService.selectedTyperoom = new Typeroom();
-    }
-  }
+  // resetForm(form?: NgForm){
+  //   if(form){
+  //     form.reset();
+  //     this.typeroomService.selectedTyperoom = new Typeroom();
+  //   }
+  // }
 
 }
