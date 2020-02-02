@@ -1,0 +1,28 @@
+<div id="bg">
+    <div class="titulo">
+        <h3>Registrar Tipo de habitacion</h3>
+    </div>
+    <div class="module">
+        <ul>
+            <li class="tab activeTab"><img src="https://cdn0.iconfinder.com/data/icons/communication-technology/500/list-512.png" alt="" class="icon" /></li>
+            <li class="tab"><img src="https://cdn4.iconfinder.com/data/icons/standard-free-icons/100/Setting-512.png" alt="" class="icon" /></li>
+            <li class="tab"><img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_format_list_bulleted_48px-512.png" alt="" class="icon" /></li>
+            <li class="tab"><img src="https://i.imgur.com/LCCJ06E.png" alt="" class="icon" /></li>
+        </ul>
+
+        <form class="form" #typeroomForm="ngForm" (ngSubmit)="addTyperoom(typeroomForm)">
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="typeroomService.selectedTyperoom.name" placeholder="nombre" class="textbox" />
+            <input type="text" name="description" #description="ngModel" [(ngModel)]="typeroomService.selectedTyperoom.description" placeholder="Descripcion" class="textbox" />
+            <!-- <input type="text" placeholder="Email Address" class="textbox" /> -->
+            <button class="button">
+                Guardar
+            </button>
+            <button class="btn btn-outline-danger limpiar" (click)="resetForm(typeroomForm)">
+                Limpiar
+            </button>
+            <!-- <input type="button" value="Next"  /> -->
+        </form>
+    </div>
+</div>
+
+<!-- <a href="http://dribbble.com/shots/1265587-Registration-Template-PSD?list=everyone" target="_blank">Design by: Asif Aleem</a> -->
