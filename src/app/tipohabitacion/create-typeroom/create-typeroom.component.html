@@ -7,8 +7,10 @@
             <input type="text" id="name" name="name" placeholder="nombre" class="textbox" [(ngModel)]="tiperoom.name">
             <input type="text" name="description" id="description" placeholder="Descripcion" class="textbox" [(ngModel)]="tiperoom.description">
             <button type="submit" class="btn button" (click)="savetipe()">Registrar</button>
-            <!-- <br> -->
-            <button class="btn-outline-danger limpiar" (click)="limpiar()">Limpiar</button>
+            <br>
+            <button class="btn-danger limpiar" (click)="limpiar()">Limpiar</button>
+            <br>
+            <button class="btn-info limpiar" (click)="lista()">Ir a la Lista</button>
         </form>
     </div>
 </div>

@@ -16,6 +16,9 @@ import { TyperoomComponent } from './components/typeroom/typeroom.component';
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { from } from 'rxjs';
 import { ListtyperromComponent } from './components/listtyperrom/listtyperrom.component';
+import { CreateTyperoomComponent } from './tipohabitacion/create-typeroom/create-typeroom.component';
+import { ListarTyperoomComponent } from './tipohabitacion/listar-typeroom/listar-typeroom.component';
+import { UpdateTyperoomComponent } from './tipohabitacion/update-typeroom/update-typeroom.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ListtyperromComponent } from './components/listtyperrom/listtyperrom.co
     FooterComponent,
     TyperoomComponent,
     ReservationComponent,
-    ListtyperromComponent
+    ListtyperromComponent,
+    CreateTyperoomComponent,
+    ListarTyperoomComponent,
+    UpdateTyperoomComponent
   ],
   imports: [
     BrowserModule,
