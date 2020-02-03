@@ -19,6 +19,9 @@ import { ListtyperromComponent } from './components/listtyperrom/listtyperrom.co
 import { CreateTyperoomComponent } from './tipohabitacion/create-typeroom/create-typeroom.component';
 import { ListarTyperoomComponent } from './tipohabitacion/listar-typeroom/listar-typeroom.component';
 import { UpdateTyperoomComponent } from './tipohabitacion/update-typeroom/update-typeroom.component';
+import { CreateuserComponent } from './user/createuser/createuser.component';
+import { ListuserComponent } from './user/listuser/listuser.component';
+import { UpdateuserComponent } from './user/updateuser/updateuser.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { UpdateTyperoomComponent } from './tipohabitacion/update-typeroom/update
     ListtyperromComponent,
     CreateTyperoomComponent,
     ListarTyperoomComponent,
-    UpdateTyperoomComponent
+    UpdateTyperoomComponent,
+    CreateuserComponent,
+    ListuserComponent,
+    UpdateuserComponent
   ],
   imports: [
     BrowserModule,

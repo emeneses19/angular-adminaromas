@@ -1,0 +1,47 @@
+<a [routerLink]="['/usuarios/create']">
+    <button type="button" class="btn btn-outline-info float-right">Nuevo Personal</button>
+</a>
+<br>
+<br>
+<div class="container justify-content-md-center">
+    <table class="table">
+        <thead>
+            <tr class="table-primary">
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">DNI</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">email</th>
+                <th scope="col">contraseña</th>
+                <th scope="col">estado</th>
+                <th scope="col">Actualizar</th>
+                <th scope="col">Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-info" *ngFor="let obj of usuario">
+                <th scope="row">{{obj.names}}</th>
+                <td>{{obj.surnames}}</td>
+                <td>{{obj.dni}}</td>
+                <td>{{obj.role}}</td>
+                <td>{{obj.phone}}</td>
+                <td>{{obj.email}}</td>
+                <td>{{obj.password}}</td>
+                <td>{{obj.state}}</td>
+                <td>
+                    <a [routerLink]="['/usuarios/update', obj.id]">
+                        <button type="button" class="btn btn-success">
+                        Actualizar
+                    </button>
+                    </a>
+                </td>
+                <td>
+                    <button (click)="deleteUsuario(obj.id)" type="button" class="btn btn-danger">
+                    Borrar
+                </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -6,6 +6,9 @@ import { ListtyperromComponent } from './components/listtyperrom/listtyperrom.co
 import { CreateTyperoomComponent } from './tipohabitacion/create-typeroom/create-typeroom.component';
 import { UpdateTyperoomComponent } from './tipohabitacion/update-typeroom/update-typeroom.component';
 import { ListarTyperoomComponent } from './tipohabitacion/listar-typeroom/listar-typeroom.component';
+import { ListuserComponent } from './user/listuser/listuser.component';
+import { CreateuserComponent } from './user/createuser/createuser.component';
+import { UpdateuserComponent } from './user/updateuser/updateuser.component';
 
 
 const routes: Routes = [
@@ -25,6 +28,23 @@ const routes: Routes = [
       {
         path: 'update/:id',
         component: UpdateTyperoomComponent
+      }
+    ]
+  },
+  {
+    path: 'usuarios',
+    children: [
+      {
+        path: '',
+        component: ListuserComponent
+      },
+      {
+        path: 'create',
+        component: CreateuserComponent
+      },
+      {
+        path: 'update/:id',
+        component: UpdateuserComponent
       }
     ]
   },

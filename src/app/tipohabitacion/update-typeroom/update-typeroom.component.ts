@@ -43,5 +43,4 @@ export class UpdateTyperoomComponent implements OnInit {
         )
     }
   }
-
 }
