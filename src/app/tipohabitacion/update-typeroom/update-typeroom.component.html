@@ -1,0 +1,13 @@
+<div id="bg">
+    <div class="titulo">
+        <h3>Actualizar Tipo de habitacion</h3>
+    </div>
+    <div class="module">
+        <form class="form" id="formNewAdmin" name="formNewAdmin">
+            <input type="text" id="name" name="name" placeholder="nombre" class="textbox" [(ngModel)]="tipohabitacion.name">
+            <input type="text" name="description" id="description" placeholder="Descripcion" class="textbox" [(ngModel)]="tipohabitacion.description">
+            <button type="submit" class="btn button" (click)="actualizartype()">Actualizar</button>
+        </form>
+    </div>
+</div>
+

@@ -23,23 +23,23 @@ export class TyperoomComponent implements OnInit {
   ngOnInit() {
   }
   savetipe() {
-      delete this.tiperoom.id;
-      this.typeroomService.postTyperoom(this.tiperoom)
-        .subscribe(
-          res => {
-            console.log(res);
-            // M.toast({html: 'Se guardó el tipo d ehabitacion!'})
-          },
-          err =>{
-            console.error(err);
-            // M.toast({html: 'No se guardó el tipo habitacion!'})
-          } 
-        )
-    }
-    limpiar(){
-      this.tiperoom.name='';
-      this.tiperoom.description='';
-    }
+    delete this.tiperoom.id;
+    this.typeroomService.postTyperoom(this.tiperoom)
+      .subscribe(
+        res => {
+          console.log(res);
+          // M.toast({html: 'Se guardó el tipo d ehabitacion!'})
+        },
+        err =>{
+          console.error(err);
+          // M.toast({html: 'No se guardó el tipo habitacion!'})
+        } 
+      )
+  }
+  limpiar(){
+    this.tiperoom.name='';
+    this.tiperoom.description='';
+  }
 
     
     

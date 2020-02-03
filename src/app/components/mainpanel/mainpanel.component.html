@@ -57,16 +57,14 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic"  aria-expanded="false" aria-controls="ui-basic">
                 <i class="icon-command menu-icon"></i>
                 <span class="menu-title">Tipo habitaciones</span>
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" routerLink="tipohabitaciones">Crear</a></li>
-                    <li class="nav-item"> <a class="nav-link" routerLink="listartipohabitacion">Listar</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Actualizar</a></li>
+                    <li class="nav-item"> <a class="nav-link" [routerLink]="['/tipohabitaciones']">Listar</a></li>
                 </ul>
             </div>
         </li>

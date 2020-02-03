@@ -1,0 +1,36 @@
+<a [routerLink]="['/tipohabitaciones/create']">
+    <button type="button" class="btn btn-outline-info float-right">Nuevo Tipo Habitacion</button>
+</a>
+<br>
+<br>
+<div class="container justify-content-md-center">
+    <table class="table">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Actualizar</th>
+            <th scope="col">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-info" *ngFor="let obj of typeroom">
+            <th scope="row">{{obj.name}}</th>
+            <td>{{obj.description}}</td>
+            <td>
+                <a [routerLink]="['/tipohabitaciones/update', obj.id]">
+                    <button type="button" class="btn btn-success">
+                        Actualizar
+                    </button>
+                </a>
+            </td>
+            <td>
+                <button (click)="deleteAdmin(obj.id)" type="button" class="btn btn-danger">
+                    Borrar
+                </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
