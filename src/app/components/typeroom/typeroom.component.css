@@ -135,9 +135,9 @@ a {
 .limpiar {
     height: 50px;
     width: 100%;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     padding: 10px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     font-weight: bold;
     font-size: 12pt;
     cursor: pointer;

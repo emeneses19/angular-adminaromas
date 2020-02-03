@@ -3,6 +3,8 @@ import { TyperoomService } from '../../services/typeroom.service';
 // import { NgForm } from '@angular/forms';
 import { Typeroom } from 'src/app/models/typeroom';
 
+// declare var M: any;
+
 @Component({
   selector: 'app-typeroom',
   templateUrl: './typeroom.component.html',
@@ -17,22 +19,30 @@ export class TyperoomComponent implements OnInit {
     description: ''
   }
   constructor(private typeroomService: TyperoomService) { }
-  savetipe() {
-    delete this.tiperoom.id;
-    this.typeroomService.postTyperoom(this.tiperoom)
-      .subscribe(
-        res => {
-          console.log(res);
-        },
-        err => console.error(err)
-      )
-  }
-  limpiar(){
-    this.tiperoom.name='';
-    this.tiperoom.description='';
-  }
+
   ngOnInit() {
   }
+  savetipe() {
+      delete this.tiperoom.id;
+      this.typeroomService.postTyperoom(this.tiperoom)
+        .subscribe(
+          res => {
+            console.log(res);
+            // M.toast({html: 'Se guardó el tipo d ehabitacion!'})
+          },
+          err =>{
+            console.error(err);
+            // M.toast({html: 'No se guardó el tipo habitacion!'})
+          } 
+        )
+    }
+    limpiar(){
+      this.tiperoom.name='';
+      this.tiperoom.description='';
+    }
+
+    
+    
 
   // addTyperoom(form: NgForm){
   //   // console.log(form.value);

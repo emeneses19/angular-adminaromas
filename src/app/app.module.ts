@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TyperoomComponent } from './components/typeroom/typeroom.component';
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { from } from 'rxjs';
+import { ListtyperromComponent } from './components/listtyperrom/listtyperrom.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { from } from 'rxjs';
     HeaderComponent,
     FooterComponent,
     TyperoomComponent,
-    ReservationComponent
+    ReservationComponent,
+    ListtyperromComponent
   ],
   imports: [
     BrowserModule,
