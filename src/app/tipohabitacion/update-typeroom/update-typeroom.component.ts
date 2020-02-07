@@ -25,7 +25,7 @@ export class UpdateTyperoomComponent implements OnInit {
       .subscribe(
         res => { 
           console.log(res);
-          this.router.navigate(['/typeroom']);
+          this.router.navigate(['/tipohabitaciones']);
         },
         err => console.error(err)
       )

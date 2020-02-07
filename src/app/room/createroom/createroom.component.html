@@ -1,0 +1,51 @@
+<br>
+<br>
+<h3 class="text-center">Creando Habitacion Nueva</h3>
+<br>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <form id="formNewRoom" name="formNewRoom">
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="inputCity"># habitacion</label>
+                    <input type="text" class="form-control" id="numberRoom" name="numberRoom" [(ngModel)]="room.numberRoom">
+                </div>
+                <div class="form-group col-md-7">
+                    <label for="inputState">Precio Noche</label>
+                    <input type="number" class="form-control" id="priceNeight" name="priceNeight" [(ngModel)]="room.priceNeight">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Descripción</label>
+                <textarea class="form-control" id="description" name="description" [(ngModel)]="room.description" rows="3"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputState">Tipo Habitacion</label>
+                    <select id="typeRoomId" name="typeRoomId" [(ngModel)]="room.typeRoomId" class="form-control">
+                        <!-- <option selected>Choose...</option> -->
+                        <option  *ngFor="let obj of typeroom" [value]="obj.id">
+                            {{obj.name}}
+                        </option>
+                     </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Estado</label>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="state" checked>
+                        <label class="custom-control-label" for="customSwitch1">Disonible</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="inputAddress2">Agregar Imagen</label>
+                <input type="file" class="form-control" id="imgRoom" name="imgRoom" [(ngModel)]="room.imgRoom">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block" (click)="saveRoom()">Guardar</button>
+            <button type="submit" class="btn btn-outline-danger btn-lg btn-block" (click)="limpiar()">Cancelar</button>
+            <button type="submit" class="btn btn-outline-success btn-lg btn-block" (click)="lista()">Ir a la Lista</button>
+        </form>
+    </div>
+</div>

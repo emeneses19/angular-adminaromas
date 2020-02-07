@@ -9,6 +9,9 @@ import { ListarTyperoomComponent } from './tipohabitacion/listar-typeroom/listar
 import { ListuserComponent } from './user/listuser/listuser.component';
 import { CreateuserComponent } from './user/createuser/createuser.component';
 import { UpdateuserComponent } from './user/updateuser/updateuser.component';
+import { ListroomComponent } from './room/listroom/listroom.component';
+import { CreateroomComponent } from './room/createroom/createroom.component';
+import { UpdateroomComponent } from './room/updateroom/updateroom.component';
 
 
 const routes: Routes = [
@@ -45,6 +48,23 @@ const routes: Routes = [
       {
         path: 'update/:id',
         component: UpdateuserComponent
+      }
+    ]
+  },
+  {
+    path: 'habitaciones',
+    children: [
+      {
+        path: '',
+        component: ListroomComponent
+      },
+      {
+        path: 'create',
+        component: CreateroomComponent
+      },
+      {
+        path: 'update/:id',
+        component: UpdateroomComponent
       }
     ]
   },

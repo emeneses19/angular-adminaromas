@@ -33,7 +33,7 @@ export class UpdateuserComponent implements OnInit {
     .subscribe(
       res => { 
         console.log(res);
-        this.router.navigate(['/usuario']);
+        this.router.navigate(['/usuarios']);
       },
       err => console.error(err)
     )

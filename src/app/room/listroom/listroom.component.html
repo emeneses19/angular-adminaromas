@@ -1,0 +1,49 @@
+<p>listroom works!</p>
+<a [routerLink]="['/habitaciones/create']">
+    <button type="button" class="btn btn-outline-info float-right">
+        Nueva Habitacion
+    </button>
+</a>
+<br>
+<br>
+<div class="container justify-content-md-center">
+    <table class="table">
+        <thead>
+            <tr class="table-primary">
+                <th scope="col">Numero</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Descrripción</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Tipo Habitacion</th>
+                <th scope="col">Tipo Descripcin</th>
+                <th scope="col">Actualizar</th>
+                <th scope="col">Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-info" *ngFor="let obj of room">
+                <th scope="row">{{obj.numberRoom}}</th>
+                <td>{{obj.priceNeight}}</td>
+                <td>{{obj.description}}</td>
+                <td>{{obj.state}}</td>
+                <!-- <td>{{obj.imgRoom}}</td> -->
+                <td>{{obj.typeRoomId}}</td>
+                <!-- <td>{{obj.tiperoom.name}}</td>
+                <td>{{obj.tiperoom.description}}</td> -->
+                <td>
+                    <a [routerLink]="['/habitaciones/update', obj.id]">
+                        <button type="button" class="btn btn-success">
+                        Actualizar
+                    </button>
+                    </a>
+                </td>
+                <td>
+                    <button (click)="deleteRoom(obj.id)" type="button" class="btn btn-danger">
+                    Borrar
+                </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
